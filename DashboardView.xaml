@@ -1,0 +1,223 @@
+<UserControl x:Class="Dashboard.DashboardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Width="1440" Height="1024"
+             xmlns:local="clr-namespace:Dashboard"
+  x:DataContext="{local:DashboardViewModel}">
+  <Grid Background="#F8F9FA">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="270"/>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="406"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="90"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <!-- Sidebar -->
+    <StackPanel Grid.Column="0" Grid.RowSpan="2" Background="White" Width="270" HorizontalAlignment="Left">
+      <Image Source="Images/TKM-Logo.png" Width="139" Height="61" Margin="32,41,0,0"/>
+      <StackPanel Margin="32,100,0,0">
+        <TextBlock Text="GENERAL" Foreground="#BDC1C6" FontFamily="Urbanist" FontSize="14"/>
+        <StackPanel Orientation="Horizontal" Height="56" Background="White" Margin="0,5,0,0">
+          <Image Source="Images/profile_icon.png" Width="24" Height="24" Margin="24,16,0,16"/>
+          <TextBlock Text="Profile" Foreground="Black" FontFamily="Urbanist" FontSize="16" VerticalAlignment="Center" Margin="12,0,0,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="56" Background="#F5EFEC" Margin="0,5,0,0">
+          <Image Source="Images/Dashboard.png" Width="24" Height="24" Margin="24,16,0,16"/>
+          <TextBlock Text="Dashboard" Foreground="#9a603f" FontFamily="Urbanist" FontSize="16" VerticalAlignment="Center" Margin="12,0,0,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="56" Background="White" Margin="0,5,0,0">
+          <Image Source="Images/Resources.png" Width="24" Height="24" Margin="24,16,0,16"/>
+          <TextBlock Text="Resources" Foreground="Black" FontFamily="Urbanist" FontSize="16" VerticalAlignment="Center" Margin="12,0,0,0"/>
+        </StackPanel>
+        <TextBlock Text="COURSES" Foreground="#BDC1C6" FontFamily="Urbanist" FontSize="14"/>
+        <StackPanel Orientation="Horizontal" Height="56" Background="White" Margin="0,5,0,0">
+          <Image Source="Images/QuickWorkout.png" Width="24" Height="24" Margin="24,16,0,16"/>
+          <TextBlock Text="Quick Workout" Foreground="Black" FontFamily="Urbanist" FontSize="16" VerticalAlignment="Center" Margin="12,0,0,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="56" Background="White" Margin="0,5,0,0">
+          <Image Source="Images/Discover.png" Width="24" Height="24" Margin="24,16,0,16"/>
+          <TextBlock Text="Discover" Foreground="Black" FontFamily="Urbanist" FontSize="16" VerticalAlignment="Center" Margin="12,0,0,0"/>
+        </StackPanel>
+        <TextBlock Text="OTHER" Foreground="#BDC1C6" FontFamily="Urbanist" FontSize="14"/>
+        <StackPanel Orientation="Horizontal" Height="56" Background="White" Margin="0,5,0,0">
+          <Image Source="Images/LeaderBoard.png" Width="24" Height="24" Margin="24,16,0,16"/>
+          <TextBlock Text="Leader Board" Foreground="Black" FontFamily="Urbanist" FontSize="16" VerticalAlignment="Center" Margin="12,0,0,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="56" Background="White" Margin="0,5,0,0">
+          <Image Source="Images/Groups.png" Width="24" Height="24" Margin="24,16,0,16"/>
+          <TextBlock Text="Groups" Foreground="Black" FontFamily="Urbanist" FontSize="16" VerticalAlignment="Center" Margin="12,0,0,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="56" Background="White" Margin="0,5,0,0">
+          <Image Source="Images/Setting.png" Width="24" Height="24" Margin="24,16,0,16"/>
+          <TextBlock Text="Setting" Foreground="Black" FontFamily="Urbanist" FontSize="16" VerticalAlignment="Center" Margin="12,0,0,0"/>
+        </StackPanel>
+        <!-- Add other sidebar items here -->
+      </StackPanel>
+
+
+      <Button Width="150" Height="50" Background="Transparent" Margin="0,200,0,0">
+        <StackPanel Orientation="Horizontal">
+          <Image Source="Images/LogOut.png" Width="32" Height="32" Margin="0,0,10,0"/>
+          <TextBlock Text="Log Out" Foreground="Black" FontFamily="Urbanist" FontSize="16" VerticalAlignment="Center" />
+        </StackPanel>
+      </Button>
+   
+      
+    </StackPanel>
+
+    <!-- Top Bar -->
+    <Grid Grid.Column="1" Grid.ColumnSpan="2" Background="White" Height="90" HorizontalAlignment="Stretch">
+      <TextBlock Text="Welcome Back, Peter!" FontFamily="Urbanist" FontSize="24" FontWeight="SemiBold" VerticalAlignment="Center" Margin="32,0,0,0"/>
+      <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,24,0">
+        <Image Source="Images/Mic.png" Width="48" Height="48" Margin="16,0,16,0"/>
+
+        <StackPanel Orientation="Vertical">
+          <TextBlock Text="Sound Check" Margin="12,20,0,0" FontFamily="Urbanist" FontWeight="Bold" FontSize="14"  Foreground="Black"/>
+          <ProgressBar Width="103" Height="8" Margin="12,10,0,0" Value="80" Maximum="100" Background="#DDDDDD" Foreground="#4ade80"/> </StackPanel>
+      
+       
+        <Image Source="Images/Bug.png" Width="48" Height="48" Margin="16,0,0,0"/>
+      </StackPanel>
+    </Grid>
+
+    <!-- Main Content -->
+    <StackPanel Grid.Column="1" Grid.Row="1" Margin="32,24,32,24">
+      <!-- Banner -->
+      <Grid Height="219" Background="White" CornerRadius="21" Margin="0,0,0,24">
+        <Grid.Background>
+          <ImageBrush ImageSource="Images/Peak.png"/>
+        </Grid.Background>
+        <StackPanel Margin="37,28,0,0">
+          <TextBlock Text="Introduction To The Kennedy Method" FontFamily="Urbanist" FontSize="24" Foreground="White"/>
+          <TextBlock Text="Meet Your Better Self" FontFamily="Urbanist" FontSize="18" FontWeight="Bold" Foreground="White" Margin="0,70,0,0"/>
+          <Button Width="141" Height="37" Background="#9A603F"  Margin="0,15,0,0">
+            <TextBlock Text="Continue Training" FontFamily="Urbanist" FontSize="14" FontWeight="SemiBold" Foreground="White"/>
+          </Button>
+        </StackPanel>
+      </Grid>
+
+      <!-- Quick Workouts -->
+      <StackPanel Margin="0,0,0,24">
+        <TextBlock Text="Quick Workouts" FontFamily="Urbanist" FontSize="18" FontWeight="SemiBold" Foreground="Black" Margin="0,0,0,16"/>
+        <StackPanel Orientation="Horizontal">
+          <Border Width="335" Height="141" Background="White" CornerRadius="18" Margin="0,0,16,0">
+            <StackPanel Margin="24">
+              <TextBlock Text="Speed Drill" FontFamily="Urbanist" FontSize="18" FontWeight="Bold" Foreground="Black"/>
+              <TextBlock Text="1 Stage / Less than a minute" FontFamily="Urbanist" FontSize="14" Foreground="Black"/>
+            </StackPanel>
+          </Border>
+          <Border Width="335" Height="141" Background="White" CornerRadius="18">
+            <StackPanel Margin="24">
+              <TextBlock Text="Neuroprimer" FontFamily="Urbanist" FontSize="18" FontWeight="Bold" Foreground="Black"/>
+              <TextBlock Text="5 Stages / 10 Minutes" FontFamily="Urbanist" FontSize="14" Foreground="Black"/>
+            </StackPanel>
+          </Border>
+        </StackPanel>
+      </StackPanel>
+
+      <!-- Up Next -->
+      <StackPanel Margin="0,0,0,24">
+        <TextBlock Text="Up Next" FontFamily="Urbanist" FontSize="18" FontWeight="SemiBold" Foreground="Black" Margin="0,0,0,16"/>
+        <Border Width="686" Height="84" Background="White" BorderBrush="#2D2D2D" BorderThickness="1" CornerRadius="18" Margin="0,0,0,16">
+          <StackPanel Orientation="Horizontal" Padding="16">
+            <Ellipse Width="52" Height="52" Fill="#DFE1E7" Margin="10,0,22,0"/>
+            <StackPanel Margin="0,15,0,0">
+              <TextBlock Text="Basic Training" FontFamily="Urbanist" FontSize="16" Foreground="Black"/>
+              <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Text="Foundations" FontFamily="Urbanist" FontSize="14" Foreground="#9AA0A6"/>
+                <Ellipse Width="8" Height="8" Fill="#DADCE0" Margin="16,0"/>
+                <TextBlock Text="John Kennedy" FontFamily="Urbanist" FontSize="14" Foreground="#9AA0A6"/>
+                <Ellipse Width="8" Height="8" Fill="#DADCE0" Margin="16,0"/>
+                <TextBlock Text="Training Session" FontFamily="Urbanist" FontSize="14" Foreground="#9AA0A6"/>
+              </StackPanel>
+            </StackPanel>
+          </StackPanel>
+        </Border>
+        <Border Width="686" Height="84" Background="White" BorderBrush="#2D2D2D" BorderThickness="1" CornerRadius="18">
+          <StackPanel Orientation="Horizontal" Padding="16">
+            <Ellipse Width="52" Height="52" Fill="#DFE1E7" Margin="10,0,22,0"/>
+            <StackPanel Margin="0,15,0,0">
+              <TextBlock Text="Tapping" FontFamily="Urbanist" FontSize="16" Foreground="Black"/>
+              <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <TextBlock Text="Foundations" FontFamily="Urbanist" FontSize="14" Foreground="#9AA0A6"/>
+                <Ellipse Width="8" Height="8" Fill="#DADCE0" Margin="16,0"/>
+                <TextBlock Text="John Kennedy" FontFamily="Urbanist" FontSize="14" Foreground="#9AA0A6"/>
+                <Ellipse Width="8" Height="8" Fill="#DADCE0" Margin="16,0"/>
+                <TextBlock Text="Training Session" FontFamily="Urbanist" FontSize="14" Foreground="#9AA0A6"/>
+              </StackPanel>
+            </StackPanel>
+          </StackPanel>
+        </Border>
+      </StackPanel>
+    </StackPanel>
+
+    <!-- Statistics -->
+    <Border Grid.Row="1" Grid.Column="2" Width="Auto" Height="Auto" Background="White" CornerRadius="24" Padding="24" HorizontalAlignment="Left"  Margin="25,25,25,25">
+      <StackPanel Orientation="Vertical" >
+        <StackPanel Orientation="Horizontal" >
+          <TextBlock Text="Your Speed Drill Baseline:" FontFamily="Urbanist" FontSize="18" FontWeight="SemiBold" Foreground="#2A3547" Margin="0,10,0,10"/>
+          <TextBlock Text="48.86s" FontFamily="Urbanist" FontSize="18" FontWeight="Bold" Foreground="#4ade80" Margin="20,10,0,10"/>
+      
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+          <TextBlock Text="Most Recent:"  Margin="0,10,0,10"/>
+          <TextBlock Text="48.95s" FontWeight="Bold"  Margin="10,10,10,10"/>
+        </StackPanel>
+       
+        <StackPanel Orientation="Horizontal">
+          <TextBlock Text="Time (Seconds)" FontFamily="Urbanist" FontSize="12" FontWeight="Bold" Foreground="Black" Width="90"/>
+          <TextBlock Text="Accuracy (%)" FontFamily="Urbanist" FontSize="12" FontWeight="Bold" Foreground="Black" Width="90"/>
+          <TextBlock Text="Words" FontFamily="Urbanist" FontSize="12" FontWeight="Bold" Foreground="Black" Width="90"/>
+          <TextBlock Text="Date" FontFamily="Urbanist" FontSize="12" FontWeight="Bold" Foreground="Black" Width="90"/>
+        </StackPanel>
+        <!-- Example Statistics Data -->
+        <StackPanel Margin="0,10,10,10" Orientation="Horizontal" >
+          
+          <TextBlock Text="Static" FontFamily="Urbanist" FontSize="12" Foreground="Black" Width="85"/>
+
+          <Border Margin="10,0,30,0" Background="#FACC15" CornerRadius="6" Width="60" Height="20" HorizontalAlignment="Center">
+            <TextBlock Text="Static" FontFamily="Urbanist" FontSize="10" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          </Border>
+          
+          <TextBlock Text="Static" FontFamily="Urbanist" FontSize="12" Foreground="Black" Width="65"/>
+          <TextBlock Text="Static" FontFamily="Urbanist" FontSize="12" Foreground="Black" Width="85"/>
+          
+        </StackPanel>
+
+
+        <!-- VERİ EKLEME-->
+        <StackPanel Margin="0,10,10,10" Orientation="Horizontal">
+
+     
+
+
+            
+            <TextBlock x:Name="Time" Text="{Binding Time}" FontFamily="Urbanist" FontSize="12" Foreground="Black" Width="85"/>
+
+            <Border Margin="10,0,30,0" Background="#FACC15" CornerRadius="6" Width="60" Height="20" HorizontalAlignment="Center">
+              <TextBlock x:Time="Accuracy" Text="{Binding Accuracy}" FontFamily="Urbanist" FontSize="10" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+
+            <TextBlock x:Words="Words" Text="{Binding Words}" FontFamily="Urbanist" FontSize="12" Foreground="Black" Width="65"/>
+            <TextBlock x:Date="Date" Text="{Binding Date}" FontFamily="Urbanist" FontSize="12" Foreground="Black" Width="85"/>
+
+        </StackPanel>
+        <!-- VERİ EKLEME-->
+        
+
+         
+        
+        
+      </StackPanel>
+    </Border>
+
+    <!-- Choose Your Training Button -->
+    <Button Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="245" Height="50" Background="#9A603F" CornerRadius="16" Margin="0,0,0,24">
+      <TextBlock Text="Choose Your Training" FontFamily="Urbanist" FontSize="16" FontWeight="Bold" Foreground="White"/>
+    </Button>
+  </Grid>
+</UserControl>
